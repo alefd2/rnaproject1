@@ -1,12 +1,29 @@
-import { FormatListBulletedRounded, Home } from "@mui/icons-material";
-import { Avatar, Divider, Drawer, List, ListItemButton, Typography, useTheme, ListItemIcon, ListItemText } from "@mui/material"
+import {
+    FormatListBulletedRounded, Home, Menu
+} from "@mui/icons-material";
+import { useGlobalContext } from "../context/GlobalContext";
+import { Avatar, Divider, Drawer, List, ListItemButton, Typography, useTheme, ListItemIcon, ListItemText, IconButton } from "@mui/material"
 import { Box, display, width } from "@mui/system"
+import { useState } from "react";
 
 export const DrawerMenu = ({ children }) => {
     const theme = useTheme();
+    // const [IsDrawerOpen, setIsDrawerOpen] = useState(true);
+    const { menuOpen, menuWidth } = useGlobalContext();
+
+
     return (
         <>
-            <Drawer variant="permanent">
+            <Drawer
+                variant="permanent"
+                anchor="left"
+                open={menuOpen}
+                onClose={() => setIsDrawerOpen(false)}
+                widt={menuWidth}
+            >
+                <IconButton color="inherit" edge="start" aria-label="logo" onClick={() => { setIsDrawerOpen(false) }}>
+                    <Menu />
+                </IconButton>
                 <Box width={theme.spacing(28)} height="100%" display="flex" flexDirection={"column"}>
                     <Box
                         width="100%"

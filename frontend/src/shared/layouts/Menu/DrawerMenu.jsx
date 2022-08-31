@@ -1,4 +1,4 @@
-import { Home } from "@mui/icons-material";
+import { FormatListBulletedRounded, Home } from "@mui/icons-material";
 import { Avatar, Divider, Drawer, List, ListItemButton, Typography, useTheme, ListItemIcon, ListItemText } from "@mui/material"
 import { Box, display, width } from "@mui/system"
 
@@ -37,7 +37,7 @@ export const DrawerMenu = ({ children }) => {
                         <List component="nav" height={theme.spacing(28)} display="flex" alineItems="center" justifyContent="center">
                             <ListItemButton>
                                 <ListItemIcon>
-                                    <Home />
+                                    <FormatListBulletedRounded />
                                 </ListItemIcon>
                                 <ListItemText primary="Listas e Usuários" />
 

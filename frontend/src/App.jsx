@@ -7,7 +7,7 @@ export const App = () => {
 
   return (
     <Routes>
-      <Route path="/home" element={<Button>ALefd</Button>} />
+      <Route path="/home" element={<Button variant="contained" color='primary'> ALefd</Button>} />
       <Route path="*" element={<Navigate to="/home" />} />
     </Routes>
   )

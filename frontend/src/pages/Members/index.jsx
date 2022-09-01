@@ -1,5 +1,5 @@
 export const Members = () => {
     return (
-        'membesr'
+        'members'
     );
 } 

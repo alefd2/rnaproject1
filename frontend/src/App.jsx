@@ -9,7 +9,7 @@ import { Members } from './pages/Members';
 export const App = () => {
   const { pathname } = useLocation();
 
-  const isAuthenticated = false;
+  const isAuthenticated = true;
 
 
   if (pathname != '/login' && !isAuthenticated) {

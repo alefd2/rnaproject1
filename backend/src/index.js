@@ -7,8 +7,8 @@ app.use(express.json)
 
 
 
-app.get("/membros", (request, response) => {
-    return response.json()
+app.get("/", (request, response) => {
+    return response.json({})
 })
 
 
